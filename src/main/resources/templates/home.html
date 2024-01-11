@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Главная</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <header th:insert="blocks/header :: header"></header>
+<main>
+
+    <style>
+        .rounded-circle {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 140px;
+            height: 140px;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0 d-flex justify-content-center align-items-center">
+                <img src="https://fainaidea.com/wp-content/uploads/2015/10/logistik_01.jpg" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+    <div class="container marketing text-center mt-5">
+        <!-- Три столбца текста под каруселью -->
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="https://lastmen.ru/wp-content/uploads/2023/11/podkova5.jpg">
+                    <img src="https://lastmen.ru/wp-content/uploads/2023/11/podkova5.jpg" alt="Аскеров Эльвин" class="rounded-circle">
+                </a>
+                <h2>Аскеров Эльвин</h2>
+                <p>Студент, дальнобойщик и путешественник. Обожает долгие дорожные приключения и делится своим опытом сокрытыми тропами.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <a href="https://i.pinimg.com/originals/c3/63/5a/c3635a9f4133eb7273279f5c705d6516.jpg">
+                    <img src="https://i.pinimg.com/originals/c3/63/5a/c3635a9f4133eb7273279f5c705d6516.jpg" alt="Борисенко Никита" class="rounded-circle">
+                </a>
+                <h2>Борисенко Никита</h2>
+                <p>Дальнобойщик с востребованными навыками вождения и планирования маршрутов. Готов решать сложные задачи на дороге.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <a href="https://img.goodfon.ru/wallpaper/nbig/3/c2/poza-ochki-khalk-khogan-aktior-actor-fotosessiia-restler-gla.jpg">
+                    <img src="https://img.goodfon.ru/wallpaper/nbig/3/c2/poza-ochki-khalk-khogan-aktior-actor-fotosessiia-restler-gla.jpg" alt="Степанов Даниил" class="rounded-circle">
+                </a>
+                <h2>Степанов Даниил</h2>
+                <p>Студент, преданный исследователь. Путешествует с камерой, чтобы запечатлеть красоту мест, которые посещает.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <!-- ФУТЕР -->
+    <footer class="container">
+        <div th:insert="blocks/footer :: footer"></div>
+    </footer>
+</main>
+
+</body>
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</html>
