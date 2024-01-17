@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Entity
 public class Post {
@@ -12,7 +15,11 @@ public class Post {
     private Long id;
 
     private String title, anons,full_text;
-    private int views;
+    private Date dt;
+
+    public Post() {
+
+    }
 
     public Long getId() {
         return id;
@@ -46,20 +53,19 @@ public class Post {
         this.full_text = full_text;
     }
 
-    public int getViews() {
-        return views;
+    public Date getDt() {return dt;}
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    public void setDt(Date dt) {
+        this.dt = dt;
     }
 
-    public void setViews(int views) {
-        this.views = views;
-    }
 
-    public Post() {
-    }
 
-    public Post(String title, String anons, String full_text) {
+    public Post(String title, String anons, String full_text, Date dt) {
         this.title = title;
         this.anons = anons;
         this.full_text = full_text;
+        this.dt = dt;
     }
+
 }

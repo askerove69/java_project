@@ -34,7 +34,7 @@ public class WebSecurityConfig {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/", "/about","/blog", "/security", "/home",  "/cargo_home").permitAll()
-                        .requestMatchers("/blog/{id}","/blog/{id}/edit", "/blog/{id}/remove", "/blog/add","/new","/save/*", "/edit/*","/delete/*").authenticated())
+                        .requestMatchers("/blog/{id}","/blog/{id}/edit", "/blog/{id}/remove", "/blog/add","/new","/save", "/edit/*","/delete/*").authenticated())
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();
     }
